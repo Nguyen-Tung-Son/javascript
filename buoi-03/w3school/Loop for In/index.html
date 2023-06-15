@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        const info = {fname: "Nguyen", lname: "Tung Son", age: 23}
+        let text1 = "";
+        for(let x in info){
+            text1 += info[x] + " ";
+        }
+        document.getElementById("demo1").innerHTML = text1;
+        const colors = ["red", "blue"];
+        let text2 = "";
+        for(let x in colors){
+            text2 += colors[x] + " ";
+        }
+        document.getElementById("demo2").innerHTML = text2;
+        let text3 = "";
+        const pets = ["cat", "dog", "mouse"]
+        pets.forEach(myFunction)
+        function myFunction(value){
+            text3 += value + " ";
+        }
+        document.getElementById("demo3").innerHTML = text3;
+    </script>
+</body>
+</html>

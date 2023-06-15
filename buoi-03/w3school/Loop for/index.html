@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+      let text = "";
+      for (let i = 0; i < 5; i++) {
+        text += i + "<br>";
+      }
+      document.getElementById("demo1").innerHTML = text;
+      const pets = ["dog", "cat", "mouse"];
+      let i, len, html;
+      for (j = 0, len = pets.length, html = ""; j < len; j++) {
+        html += pets[j] + "<br>";
+      }
+      document.getElementById("demo2").innerHTML = html;
+      const colors = ["red", "blue"];
+      let k = 0;
+      let text2 = "";
+      let len2 = colors.length;
+      for(; k < len2;){
+        text2 += colors[k] + "<br>";
+        k++;
+      }
+      document.getElementById("demo3").innerHTML = text2;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        let text = "";
+        for(let i = 0; i < 10; i++){
+            if(i===3){break;}
+            text += i + "<br>"
+        }
+        document.getElementById("demo1").innerHTML = text;
+        let html = "";
+        for(let i = 0; i < 10; i++){
+            if(i===3){continue;}
+            html += i + "<br>"
+        }
+        document.getElementById("demo2").innerHTML = html;
+        let txt = "";
+        const colors = ["red", "blue"];
+        list1: {
+            txt += colors[0] + "<br>";
+            break list1;
+            txt += colors[1] + "<br>";
+        }
+        document.getElementById("demo3").innerHTML = txt;
+    </script>
+</body>
+</html>
