@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p></p>
+    <p class="demo1">demo1</p>
+    <p class="demo1">demo1</p>
+    <p id="demo2"></p>
+    <script>
+      document.getElementById("demo1").innerHTML = "Hello 1";
+      document.getElementsByTagName("p")[1].innerHTML = "Hello 2";
+      document.getElementsByClassName("demo1")[1].innerHTML = "demo2";
+      let x = document.querySelectorAll("p.demo1");
+      document.getElementById("demo2").innerHTML = x[1].innerHTML;
+    </script>
+  </body>
+</html>
