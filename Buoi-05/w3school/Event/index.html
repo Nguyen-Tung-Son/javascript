@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="checkCookies()">
+    <p onclick="this.innerHTML = 'hello2'">hello1</p>
+    <button onclick="myFunction()">do it</button>
+    <p id="demo1">hello1</p>
+    <button id="btn">do it</button>
+    <p id="demo2">hello1</p>
+    <p id="demo3"></p>
+    enter <input type="text" id="demo4" onchange="upperCase()" />
+    <script>
+      function myFunction() {
+        document.getElementById("demo1").innerHTML = "hello2";
+      }
+      document.getElementById("btn").onclick = myFunction2();
+      function myFunction2() {
+        document.getElementById("demo2").innerHTML = "hello2";
+      }
+      function checkCookies() {
+        var text = "";
+        if (navigator.cookieEnabled == true) {
+          text = "Cookies are enabled.";
+        } else {
+          text = "Cookies are not enabled.";
+        }
+        document.getElementById("demo3").innerHTML = text;
+        function upperCase() {
+          const x = document.getElementById("demo4");
+          x.value = x.value.toUpperCase();
+        }
+      }
+    </script>
+  </body>
+</html>
