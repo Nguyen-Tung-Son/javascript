@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+      function myFunction(x, y = 10) {
+        return x + y;
+      }
+      document.getElementById("demo1").innerHTML = myFunction(5);
+
+      function sumAll() {
+        let sum = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          sum += arguments[i];
+        }
+        return sum;
+      }
+      document.getElementById("demo").innerHTML = sumAll(
+        1,
+        123,
+        500,
+        115,
+        44,
+        88
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+      let x = myFunction(4, 3);
+      document.getElementById("demo1").innerHTML = x;
+
+      function myFunction(a, b) {
+        return a * b;
+      }
+      const y = function (a, b) {
+        return a * b;
+      };
+      document.getElementById("demo2").innerHTML = y;
+
+      function myFunction(a, b) {
+        return a * b;
+      }
+      let c = myFunction(4, 3) * 2;
+      document.getElementById("demo3").innerHTML = c;
+
+      function myFunction(a, b) {
+        return a * b;
+      }
+      document.getElementById("demo4").innerHTML = myFunction.toString();
+      const z = (x, y) => x * y;
+      document.getElementById("demo5").innerHTML = z(5, 5);
+    </script>
+  </body>
+</html>

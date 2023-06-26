@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+      let a = 4;
+      myFunction();
+
+      function myFunction() {
+        document.getElementById("demo1").innerHTML = a * a;
+      }
+
+      document.getElementById("demo2").innerHTML = add1();
+      function add1() {
+        let counter = 0;
+        function plus() {
+          counter += 1;
+        }
+        plus();
+        return counter;
+      }
+
+      const add2 = (function () {
+        let counter = 0;
+        return function () {
+          counter += 1;
+          return counter;
+        };
+      })();
+
+      function myFunction() {
+        document.getElementById("demo3").innerHTML = add2();
+      }
+    </script>
+  </body>
+</html>

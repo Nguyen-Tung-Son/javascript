@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+      function myFunction(a, b) {
+        return a * b;
+      }
+      document.getElementById("demo1").innerHTML = myFunction(10, 2);
+      let x = myFunction();
+      function myFunction() {
+        return this;
+      }
+      document.getElementById("demo2").innerHTML = x;
+
+      const myObject = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function () {
+          return this;
+        },
+      };
+      document.getElementById("demo3").innerHTML = myObject.fullName();
+
+      function myFunction(arg1, arg2) {
+        this.firstName = arg1;
+        this.lastName = arg2;
+      }
+
+      const myObj = new myFunction("John", "Doe");
+      document.getElementById("demo4").innerHTML = myObj.firstName;
+    </script>
+  </body>
+</html>

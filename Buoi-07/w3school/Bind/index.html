@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      const member = {
+        firstName: "Hege",
+        lastName: "Nilsen",
+      };
+
+      let fullName = person.fullName.bind(member);
+
+      document.getElementById("demo").innerHTML = fullName();
+
+      const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+        display: function () {
+          let x = document.getElementById("demo2");
+          x.innerHTML = this.firstName + " " + this.lastName;
+        },
+      };
+
+      let display = person1.display.bind(person1);
+      setTimeout(display, 3000);
+    </script>
+  </body>
+</html>

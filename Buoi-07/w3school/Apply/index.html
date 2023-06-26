@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+      const person = {
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+      };
+
+      document.getElementById("demo1").innerHTML =
+        person.fullName.apply(person1);
+
+      const person2 = {
+        fullName: function (city, country) {
+          return (
+            this.firstName + " " + this.lastName + "," + city + "," + country
+          );
+        },
+      };
+
+      const person3 = {
+        firstName: "John",
+        lastName: "Doe",
+      };
+
+      document.getElementById("demo2").innerHTML = person2.fullName.apply(
+        person3,
+        ["Oslo", "Norway"]
+      );
+
+      document.getElementById("demo3").innerHTML = Math.max.apply(
+        null,
+        [1, 2, 3]
+      );
+    </script>
+  </body>
+</html>
