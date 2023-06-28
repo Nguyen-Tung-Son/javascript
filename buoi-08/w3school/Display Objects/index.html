@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+      const info1 = {
+        name: "Tung Son",
+        age: 23,
+        city: "Ha Noi",
+      };
+
+      document.getElementById("demo1").innerHTML = person;
+
+      //
+
+      const info2 = {
+        name: "Tung Son",
+        age: 23,
+        city: "Ha Noi",
+      };
+
+      document.getElementById("demo2").innerHTML =
+        info2.name + ", " + info2.age + ", " + info2.city;
+
+      //
+
+      const info3 = {
+        name: "Tung Son",
+        age: 23,
+        city: "Ha Noi",
+      };
+
+      let txt = "";
+      for (let x in info3) {
+        txt += info3[x] + " ";
+      }
+
+      document.getElementById("demo3").innerHTML = txt;
+
+      //
+
+      const info4 = {
+        name: "Tung Son",
+        age: 23,
+        city: "Ha Noi",
+      };
+
+      document.getElementById("demo4").innerHTML = Object.values(info4);
+    </script>
+  </body>
+</html>

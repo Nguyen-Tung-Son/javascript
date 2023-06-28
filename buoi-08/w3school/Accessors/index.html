@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        const info1 = {
+            fname: "Nguyen",
+            lname: "Tung Son",
+            age: 23,
+            get name(){
+                return this.lname;
+            }
+        }
+        document.getElementById("demo1").innerHTML = info1.name;
+
+        //
+
+        const info2 = {
+            fname: "Nguyen",
+            lname: "Tung Son",
+            age: 23,
+            set tuoi(giatri){
+                this.age = giatri;
+            }
+        }
+        info2.tuoi = 21
+        document.getElementById("demo2").innerHTML = info2.age;
+    </script>
+</body>
+</html>

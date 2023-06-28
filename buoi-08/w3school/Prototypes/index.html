@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <body>
+    <script>
+      function info(fname, lname, age) {
+        this.firstName = fname;
+        this.lastName = lname;
+        this.age = age;
+      }
+      const Student = new info("Nguyen", "Tung Son", 23);
+      info.prototype.hair = "black";
+      document.getElementById("demo1").innerHTML = Student.hair;
+      info.prototype.name = function () {
+        return this.firstName + " " + this.lastName;
+      };
+      document.getElementById("demo2").innerHTML = Student.name();
+    </script>
+  </body>
+</html>

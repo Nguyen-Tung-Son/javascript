@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <script>
+      const StudentAge = new Map([
+        ["Tung Son", 23],
+        ["Van Toan", 22],
+        ["Khanh", 20],
+      ]);
+      document.getElementById("demo1").innerHTML = StudentAge.get("Tung Son");
+
+      //
+
+      StudentAge.set("Giang", 20);
+      document.getElementById("demo2").innerHTML = StudentAge.get("Giang");
+
+      //
+
+      document.getElementById("demo3").innerHTML = StudentAge.size;
+
+      //
+
+      document.getElementById("demo4").innerHTML = StudentAge.delete;
+
+      //
+
+      StudentAge.clear();
+      document.getElementById("demo5").innerHTML = StudentAge.size;
+
+      //
+
+      document.getElementById("demo6").innerHTML = StudentAge.has("Tung Son");
+
+      //
+
+      document.getElementById("demo7").innerHTML = typeof StudentAge;
+
+      //
+
+      document.getElementById("demo8").innerHTML = StudentAge instanceof Map;
+
+      //
+
+      const StudentAge2 = new Map([
+        ["Tung Son", 23],
+        ["Van Toan", 22],
+        ["Khanh", 20],
+      ]);
+
+      let text = "";
+      StudentAge2.forEach(function (value, key) {
+        text += key + " = " + value + "<br>";
+      });
+      document.getElementById("demo9").innerHTML = text;
+
+      //
+
+      let txt = "";
+      for (const x of StudentAge2.entries()) {
+        txt += x + "<br>";
+      }
+
+      document.getElementById("demo10").innerHTML = txt;
+
+      //
+
+      let html = "";
+      for (const x of StudentAge2.keys()) {
+        html += x + "<br>";
+      }
+
+      document.getElementById("demo11").innerHTML = html;
+
+      //
+
+      let text2 = "";
+      for (const x of StudentAge2.values()) {
+        text2 += x + "<br>";
+      }
+
+      document.getElementById("demo12").innerHTML = text2;
+    </script>
+  </body>
+</html>

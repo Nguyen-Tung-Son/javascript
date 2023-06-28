@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+      const info1 = {
+        firstname: "Nguyen",
+        lastname: "Tung Son",
+        age: 23,
+        eyecolor: "black",
+      };
+      info1.nationality = "English";
+      delete info1.age;
+      document.getElementById("demo1").innerHTML =
+        info1["firstname"] + " is " + info1["age"] + " years old.";
+
+      //
+
+      const info2 = {
+        fname: "nguyen",
+        lname: "Tung Son",
+        age: 23,
+      };
+      let txt = "";
+      for (let x in info2) {
+        txt += info2[x] + " ";
+      }
+      document.getElementById("demo2").innerHTML = txt;
+
+      //
+
+      const info3 = {
+        name: "Tung Son",
+        age: 23,
+        cars: {
+          car1: "Ford",
+          car2: "BMW",
+          car3: "Fiat",
+        },
+      };
+      document.getElementById("demo3").innerHTML = info3["cars"]["car2"];
+
+      //
+
+      let x = "";
+      const info4 = {
+        name: "John",
+        age: 30,
+        cars: [
+          { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+          { name: "BMW", models: ["320", "X3", "X5"] },
+          { name: "Fiat", models: ["500", "Panda"] },
+        ],
+      };
+
+      for (let i in info4.cars) {
+        x += "<h2>" + info4.cars[i].name + "</h2>";
+        for (let j in info4.cars[i].models) {
+          x += info4.cars[i].models[j] + "<br>";
+        }
+      }
+
+      document.getElementById("demo4").innerHTML = x;
+    </script>
+  </body>
+</html>

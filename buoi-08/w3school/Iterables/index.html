@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+      function myNumbers() {
+        let n = 0;
+        return {
+          next: function () {
+            n += 10;
+            return { value: n, done: false };
+          },
+        };
+      }
+
+      const n = myNumbers();
+      n.next();
+      n.next();
+      n.next();
+
+      document.getElementById("demo1").innerHTML = n.next().value;
+
+      //
+
+      myNumbers = {};
+
+      // Make it Iterable
+      myNumbers[Symbol.iterator] = function () {
+        let n = 0;
+        done = false;
+        return {
+          next() {
+            n += 10;
+            if (n == 100) {
+              done = true;
+            }
+            return { value: n, done: done };
+          },
+        };
+      };
+
+      let text = "";
+      for (const num of myNumbers) {
+        text += num + "<br>";
+      }
+
+      document.getElementById("demo2").innerHTML = text;
+    </script>
+  </body>
+</html>
