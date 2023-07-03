@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <button onclick="myFunction()">do it</button>
+    <p id="demo4">mot</p>
+    <p id="demo5"></p>
+    <button onclick="myFunction2()">do it 2</button>
+    <p id="demo6">mot</p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <script>
+      let info1 = "Nguyen Tung Son";
+      document.getElementById("demo1").innerHTML = info1.slice(7, 15);
+      document.getElementById("demo2").innerHTML = info1.substring(7, 15);
+      document.getElementById("demo3").innerHTML = info1.substr(7, 8);
+      function myFunction() {
+        let txt = document.getElementById("demo4").innerHTML;
+        document.getElementById("demo4").innerHTML = txt.replace("mot", "hai");
+      }
+      //
+      let text = "mot hai ba";
+      text = text.replaceAll("mot", "hai");
+      document.getElementById("demo5").innerHTML = text;
+      //
+      function myFunction2() {
+        let html = document.getElementById("demo6").innerHTML;
+        document.getElementById("demo6").innerHTML = html.toUpperCase();
+      }
+      let str1 = "MOT";
+      let str2 = str1.toLowerCase();
+      document.getElementById("demo7").innerHTML = str2;
+      //
+      let str3 = "Tung";
+      let str4 = "Son";
+      let str5 = str3.concat(" ", str4);
+      document.getElementById("demo8").innerHTML = str5;
+      //
+      let test = "mot hai ba bon";
+      const myArray1 = test.split("");
+      document.getElementById("demo9").innerHTML = myArray1;
+      //
+      let test2 = "mot hai ba bon";
+      const myArray2 = test2.split(" ");
+      document.getElementById("demo10").innerHTML = myArray2;
+    </script>
+  </body>
+</html>

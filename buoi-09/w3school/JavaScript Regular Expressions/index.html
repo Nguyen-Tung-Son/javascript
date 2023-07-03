@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3">mot hai ba</p>
+    <p id="demo4"></p>
+    <script>
+        let text = "mot hai ba";
+        let n = text.search(/mot/i)
+        document.getElementById("demo1").innerHTML = n;
+        //
+        let l = text.replace(/mot/i, "hai");
+        document.getElementById("demo2").innerHTML = l;
+        //
+        let text2 = document.getElementById("demo3").innerHTML;
+        document.getElementById("demo4").innerHTML = /mot/.test(text2)
+    </script>
+</body>
+</html>

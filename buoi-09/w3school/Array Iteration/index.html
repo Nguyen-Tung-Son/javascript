@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+    <p id="demo15"></p>
+    <script>
+      const numbers = [45, 4, 9, 16, 25];
+
+      let txt = "";
+      numbers.forEach(myFunction);
+      document.getElementById("demo1").innerHTML = txt;
+
+      function myFunction(value, index, array) {
+        txt += value + "<br>";
+      }
+      //
+      const numbers1 = [45, 4, 9, 16, 25];
+      const numbers2 = numbers1.map(myFunction2);
+
+      document.getElementById("demo2").innerHTML = numbers2;
+
+      function myFunction2(value) {
+        return value * 2;
+      }
+      //
+      const NewArray = numbers1.flatMap((x) => x * 2);
+      document.getElementById("demo3").innerHTML = NewArray;
+      //
+      const over16 = numbers1.filter(myFunction3);
+      function myFunction3(e) {
+        return e > 16;
+      }
+      document.getElementById("demo4").innerHTML = over16;
+      //
+      const numbers4 = [45, 4, 9, 16, 25];
+      let sum = numbers4.reduce(myFunction4);
+
+      document.getElementById("demo5").innerHTML = "The sum is " + sum;
+
+      function myFunction4(total, value, index, array) {
+        return total + value;
+      }
+      //
+      const allover16 = numbers4.every(myFunction5);
+      function myFunction5(e) {
+        return e > 16;
+      }
+      document.getElementById("demo6").innerHTML = allover16;
+      //
+      const someover16 = numbers4.some(myFunction6);
+      function myFunction6(e) {
+        return e > 16;
+      }
+      document.getElementById("demo7").innerHTML = someover16;
+      //
+      const info1 = ["Son", "Khoat", "Huy", "Son", "Toan"];
+      let position = info1.indexOf("Son");
+      document.getElementById("demo8").innerHTML = position;
+      //
+      let position2 = info1.lastIndexOf("Son");
+      document.getElementById("demo9").innerHTML = position2;
+      //
+      let first = numbers4.find(myFunction7);
+      function myFunction7(e) {
+        return e > 16;
+      }
+      document.getElementById("demo10").innerHTML = first;
+      //
+      let first2 = numbers4.findIndex(myFunction8);
+      function myFunction8(e) {
+        return e > 16;
+      }
+      document.getElementById("demo11").innerHTML = first2;
+      //
+      const myArr = Array.from("ABCDEFG");
+      document.getElementById("demo12").innerHTML = myArr;
+      //
+      let keys = info1.keys();
+      let text;
+      for (let x of keys) {
+        text += x + "<br>";
+      }
+      document.getElementById("demo13").innerHTML = text;
+      //
+      let entries = info1.entries();
+      let text2;
+      for(let x of entries){
+        text2 += x + "<br>";
+      }
+      document.getElementById("demo14").innerHTML = text2;
+      //
+      document.getElementById("demo15").innerHTML = info1.includes("Son");
+    </script>
+  </body>
+</html>

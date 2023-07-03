@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <script>
+      const d1 = new Date();
+      document.getElementById("demo1").innerHTML = d1.getFullYear();
+      //
+      const d2 = new Date();
+      document.getElementById("demo2").innerHTML = d2.getMonth() + 1;
+      //
+      const d3 = new Date();
+      document.getElementById("demo3").innerHTML = d3.getDate();
+      //
+      const d4 = new Date();
+      document.getElementById("demo4").innerHTML = d4.getHours();
+      //
+      const d5 = new Date();
+      document.getElementById("demo5").innerHTML = d5.getMinutes();
+      //
+      const d6 = new Date();
+      document.getElementById("demo6").innerHTML = d6.getSeconds();
+      //
+      const d7 = new Date();
+      document.getElementById("demo7").innerHTML = d7.getMilliseconds();
+      //
+      const d8 = new Date();
+      document.getElementById("demo8").innerHTML = d8.getDay();
+      //
+      const d9 = new Date();
+      document.getElementById("demo9").innerHTML = d9.getTime();
+      //
+      const date = Date.now();
+      document.getElementById("demo10").innerHTML = date;
+      //
+      const d10 = new Date();
+      document.getElementById("demo11").innerHTML = d10.getTimezoneOffset();
+    </script>
+  </body>
+</html>

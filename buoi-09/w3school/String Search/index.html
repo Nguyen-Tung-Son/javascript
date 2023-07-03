@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <script>
+      let text = "mot hai ba bon mot hai ba";
+      let index = text.indexOf("mot");
+      document.getElementById("demo1").innerHTML = index;
+
+      //
+      let index2 = text.lastIndexOf("mot");
+      document.getElementById("demo2").innerHTML = index2;
+
+      //
+      let index3 = text.search("mot");
+      document.getElementById("demo3").innerHTML = index3;
+      //
+      let text4 = "mot hai ba bon mot";
+      const arr = text4.match(/ot/g);
+      document.getElementById("demo5").innerHTML = arr.length + " " + arr;
+      //
+      let text5 = "mot hai ba bon mot";
+      const arr2 = text5.matchAll("mot");
+      document.getElementById("demo6").innerHTML = Array.from(arr2)
+      //
+      document.getElementById("demo7").innerHTML = text5.includes("mot");
+      //
+      document.getElementById("demo8").innerHTML = text5.startsWith("mot");
+      //
+      document.getElementById("demo9").innerHTML = text5.startsWith("hai", 4);
+      //
+      document.getElementById("demo10").innerHTML = text5.endsWith("hai");
+    </script>
+  </body>
+</html>

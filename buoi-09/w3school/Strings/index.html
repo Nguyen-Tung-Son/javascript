@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+        let info1 = "Tung";
+        let info2 = "Son";
+        document.getElementById("demo1").innerHTML =
+        info1 + " " + info2;
+
+        //
+        let info3 = "sjknafnkafhga;glka"
+        document.getElementById("demo2").innerHTML = info3.length;
+
+        //
+        let inf04 = "My name is \"Tung Son\"";
+        document.getElementById("demo3").innerHTML = inf04;
+
+        //
+        let info5 = "Tung Son";
+        let info6 = new String("Tung Son");
+        document.getElementById("demo4").innerHTML = (info5 == info6);
+
+        //
+        document.getElementById("demo5").innerHTML = (info5 === info6);
+    </script>
+</body>
+</html>

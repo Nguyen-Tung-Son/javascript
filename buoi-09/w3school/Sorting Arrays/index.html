@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <button onclick="myFunction()">Try it</button>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <script>
+      const info1 = ["Son", "Huy", "Toan"];
+      info1.sort();
+      document.getElementById("demo1").innerHTML = info1;
+      //
+      info1.reverse();
+      document.getElementById("demo2").innerHTML = info1;
+      //
+      const points = [40, 100, 1, 5, 25, 10];
+      document.getElementById("demo3").innerHTML = points;
+
+      points.sort(function (a, b) {
+        return a - b;
+      });
+      document.getElementById("demo4").innerHTML = points;
+      //
+      function myFunction() {
+        points.sort(function () {
+          return 0.5 - Math.random();
+        });
+        document.getElementById("demo5").innerHTML = points;
+      }
+      //
+      document.getElementById("demo6").innerHTML = myArrayMax(points);
+
+      function myArrayMax(arr) {
+        return Math.max.apply(null, arr);
+      }
+      //
+      document.getElementById("demo7").innerHTML = myArrayMin(points);
+
+      function myArrayMin(arr) {
+        return Math.min.apply(null, arr);
+      }
+    </script>
+  </body>
+</html>

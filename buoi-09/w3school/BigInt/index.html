@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <script>
+      let x = 9999999999999999n;
+      let y = BigInt("9999999999999999");
+      let x1 = 9999999999999999n;
+      let z = x * x1;
+      document.getElementById("demo1").innerHTML = x + "<br>" + y;
+      //
+      document.getElementById("demo2").innerHTML = typeof y;
+      //
+      document.getElementById("demo3").innerHTML = z;
+      //
+      let hex = 0x20000000000003n;
+      let oct = 0o400000000000000003n;
+      let bin = 0b100000000000000000000000000000000000000000000000000011n;
+
+      document.getElementById("demo4").innerHTML =
+        hex + "<br>" + oct + "<br>" + bin;
+      //
+      document.getElementById("demo5").innerHTML =
+        Number.isInteger(10) + "<br>" + Number.isInteger(10.5);
+    </script>
+  </body>
+</html>

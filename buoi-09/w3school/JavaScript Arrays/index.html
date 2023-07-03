@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <script>
+      const info1 = ["Son", "Huy", "Toan"];
+      document.getElementById("demo1").innerHTML = info1;
+      //
+      const info2 = new Array("Son", "Huy", "Toan");
+      document.getElementById("demo2").innerHTML = info2;
+      //
+      document.getElementById("demo3").innerHTML = info2[0];
+      //
+      info2[2] = "Giang";
+      document.getElementById("demo4").innerHTML = info2;
+      //
+      document.getElementById("demo5").innerHTML = info2.toString();
+      //
+      document.getElementById("demo6").innerHTML = info2.length;
+      //
+      document.getElementById("demo7").innerHTML = info2[info2.length - 1];
+      //
+      let text = "<ul>";
+      for (let i = 0; i < info2.length; i++) {
+        text += "<li>" + info2[i] + "</li>";
+      }
+      text += "</ul>";
+
+      document.getElementById("demo8").innerHTML = text;
+      //
+      info2.push("Toan");
+      document.getElementById("demo8").innerHTML = info2;
+      //
+      const info3 = [];
+      info3[0] = "Tung Son";
+      info3[1] = "Toan";
+      info3[2] = "Huy";
+      document.getElementById("demo9").innerHTML =
+        info3[0] + " " + info3.length;
+      //
+      document.getElementById("demo10").innerHTML = info3 instanceof Array;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <p id="demo9"></p>
+    <p id="demo10"></p>
+    <script>
+      let x = 3.14;
+      let y = 3;
+      document.getElementById("demo1").innerHTML = x + "<br>" + y;
+      //
+      let x2 = 999999999999999;
+      let y2 = 9999999999999999;
+      document.getElementById("demo2").innerHTML = x2 + "<br>" + y2;
+      //
+      let x3 = 0.2 + 0.1;
+      document.getElementById("demo3").innerHTML = "0.2 + 0.1 = " + x3;
+      let y3 = (0.2 * 10 + 0.1 * 10) / 10;
+      document.getElementById("demo4").innerHTML = "0.2 + 0.1 = " + y3;
+      //
+      let x4 = 10;
+      let y4 = 20;
+      let z4 = "30";
+      let result = x4 + y4 + z4;
+      document.getElementById("demo5").innerHTML = result;
+      //
+      let x5 = "100";
+      let y5 = "10";
+      let z5 = x5 - y5;
+      document.getElementById("demo6").innerHTML = z5;
+      //
+      let x6 = NaN;
+      let y6 = "5";
+      document.getElementById("demo7").innerHTML = x6 + y6;
+      //
+      document.getElementById("demo8").innerHTML = typeof Infinity;
+      //
+      let x7 = 0xff;
+      document.getElementById("demo9").innerHTML = "0xFF = " + x7;
+      //
+      
+      let x8 = 123;
+
+      
+      let y8 = new Number(123);
+
+      document.getElementById("demo10").innerHTML = typeof x8 + "<br>" + typeof y8;
+    </script>
+  </body>
+</html>
