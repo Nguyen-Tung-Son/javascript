@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+      class info {
+        constructor(name, year) {
+          this.name = name;
+          this.year = year;
+        }
+        age() {
+          const date = new Date();
+          return date.getFullYear() - this.year;
+        }
+      }
+
+      class demo extends info{
+        constructor(year, hair){
+            super(year);
+            this.hair = hair;
+        }
+        show(){
+            return this.age() + this.hair;
+        }
+      }
+      let info1 = new demo(2000, "black")
+      document.getElementById("demo1").innerHTML = info1.show();
+
+      //
+
+      class info3{
+        constructor(name){
+          this.name = name
+        }
+        get FullName(){
+          return this.name
+        }
+        set FullName(e){
+          this.name = e;
+        }
+      }
+      const info2 = new info("Tung Son");
+      document.getElementById("demo2").innerHTML = info2.FullName
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+      class info {
+        constructor(name) {
+          this.name = name;
+        }
+        static hello() {
+          return "Hello";
+        }
+      }
+      const info1 = new info("Tung Son");
+      document.getElementById("demo1").innerHTML = info.hello();
+
+      //
+      class info2 {
+        constructor(name) {
+          this.name = name;
+        }
+        static hello(e) {
+          return "Hello " + e.name;
+        }
+      }
+      const info3 = new info("Tung Son");
+      document.getElementById("demo2").innerHTML = info.hello(info3)
+    </script>
+  </body>
+</html>
