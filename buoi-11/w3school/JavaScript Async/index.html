@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+      function myDisplayer(some) {
+        document.getElementById("demo1").innerHTML = some;
+      }
+
+      async function myFunction() {
+        return "Hello";
+      }
+
+      myFunction().then(
+        function (value) {
+          myDisplayer(value);
+        },
+        function (error) {
+          myDisplayer(error);
+        }
+      );
+
+      //
+
+      async function myDisplay() {
+        let myPromise = new Promise(function (resolve, reject) {
+          resolve("I love You !!");
+        });
+        document.getElementById("demo2").innerHTML = await myPromise;
+      }
+
+      myDisplay();
+
+      //
+
+      async function myDisplay2() {
+        let myPromise = new Promise(function (resolve) {
+          resolve("I love You !!");
+        });
+        document.getElementById("demo3").innerHTML = await myPromise;
+      }
+
+      myDisplay2();
+    </script>
+  </body>
+</html>

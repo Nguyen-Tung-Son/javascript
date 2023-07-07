@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+      setTimeout(myFunction, 3000);
+
+      function myFunction() {
+        document.getElementById("demo1").innerHTML = "I love You !!";
+      }
+
+      //
+
+      setTimeout(function () {
+        myFunction2("I love You !!!");
+      }, 3000);
+
+      function myFunction2(value) {
+        document.getElementById("demo2").innerHTML = value;
+      }
+
+      //
+
+      setInterval(myFunction3, 1000);
+
+      function myFunction3() {
+        let d = new Date();
+        document.getElementById("demo3").innerHTML =
+          d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+      }
+    </script>
+  </body>
+</html>

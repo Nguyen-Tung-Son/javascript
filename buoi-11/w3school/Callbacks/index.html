@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        function displayName(e){
+            document.getElementById("demo1").innerHTML = e;
+        }
+        function Name(fname, lname){
+           let fullName = fname + lname;
+           return fullName;
+        }
+        let result = Name("Nguyen ", "Tung Son")
+        displayName(result)
+
+        //
+
+        function displayName2(e){
+            document.getElementById("demo2").innerHTML = e;
+        }
+        function Name2(fname, lname){
+            let fullName = fname+lname
+            displayName2(fullName);
+        }
+        Name2("Nguyen ", "Van Toan")
+
+        //
+
+        function displayName3(e){
+            document.getElementById("demo3").innerHTML = e;
+        }
+        function Name3(fname, lname, callBackName){
+            let fullName = fname+lname;
+            callBackName(fullName)
+        }
+        Name3("Nguyen ", "Duc Huy", displayName3)
+    </script>
+</body>
+</html>
