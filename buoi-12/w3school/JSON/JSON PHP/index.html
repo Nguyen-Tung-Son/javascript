@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+      const xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onload = function () {
+        const myObj = JSON.parse(this.responseText);
+        document.getElementById("demo1").innerHTML = myObj.name;
+      };
+      xmlhttp.open("GET", "demo_file.php");
+      xmlhttp.send();
+
+      //
+
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onload = function () {
+        const myObj = JSON.parse(this.responseText);
+        document.getElementById("demo2").innerHTML = myObj[2];
+      };
+      xmlhttp.open("GET", "demo_file_array.php");
+      xmlhttp.send();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="clickButton()">Click me!</button>
+
+    <p id="demo1"></p>
+    <script>
+      function clickButton() {
+        let s = document.createElement("script");
+        s.src = "demo_jsonp.php";
+        document.body.appendChild(s);
+      }
+
+      function myFunc(myObj) {
+        document.getElementById("demo1").innerHTML = myObj.name;
+      }
+    </script>
+  </body>
+</html>

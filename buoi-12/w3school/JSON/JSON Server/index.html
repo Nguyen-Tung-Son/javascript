@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <script>
+      const myObj = { name: "John", age: 31, city: "New York" };
+      const myJSON = JSON.stringify(myObj);
+      window.location = "demo_json.php?x=" + myJSON;
+
+      //
+
+      const myJSON2 = '{"name":"John", "age":31, "city":"New York"}';
+      const myObj2 = JSON.parse(myJSON2);
+      document.getElementById("demo1").innerHTML = myObj2.name;
+    </script>
+  </body>
+</html>
